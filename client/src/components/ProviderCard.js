@@ -4,7 +4,6 @@ function ProviderCard({ provider }) {
     const [comic, setComic] = useState('')
 
     useEffect(() => {
-        const id = Math.ceil(Math.random() * 614)
         fetch(`https://xkcd.com/${id}/info.0.json`)
           .then(resp => resp.json())
           .then(data => console.log(data))
