@@ -1,4 +1,4 @@
-import '../App.css';
+// import '../App.css';
 import React, { useState, useEffect } from 'react'
 import ProviderCard from './ProviderCard';
 
@@ -17,6 +17,7 @@ function App() {
 
   return (
     <div className="App">
+      <h1>Doctective</h1>
       {providerCards}
     </div>
   );
