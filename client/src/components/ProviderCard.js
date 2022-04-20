@@ -34,10 +34,11 @@ function ProviderCard({ provider }) {
         <div>
             <img src={picture.medium} alt={formatName(name)} />
             <h2>{formatName(name)}</h2>
-            <p>{gender}</p>
-            <p>{cell}</p>
-            <p>{email}</p>
-            <p>{formatLocation(location)}</p>
+            <p>Gender: {gender}</p>
+            <p>Cell phone: {cell}</p>
+            <p>Email: {email}</p>
+            <p>Address: {formatLocation(location)}</p>
+            <p>Favorite XKCD comic: <a href={comic.img} target="_blank" rel="noreferrer noopener">{comic.title}</a></p>
         </div>
     )
 }
