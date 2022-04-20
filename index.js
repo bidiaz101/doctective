@@ -9,7 +9,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get('/', (req, res) => {
+app.get('/comics/random', (req, res) => {
   const id = Math.ceil(Math.random() * 2609)
   request(
     { url: `https://xkcd.com/${id}/info.0.json` },
