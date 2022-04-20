@@ -17,8 +17,12 @@ function App() {
   return (
     <div className="App">
       <h1>Doctective</h1>
-      <p>Featured Results</p>
-      {providerCards}
+      <p>Results</p>
+      <div className='grid-wrap'>
+        <div className='grid'>
+          {providerCards}
+        </div>
+      </div>
     </div>
   );
 }
