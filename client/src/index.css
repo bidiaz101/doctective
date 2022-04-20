@@ -16,17 +16,30 @@ body * {
   border: solid 2px red;
 }
 
+h1{
+  color: white;
+  background-color: rgba(49, 101, 150, 0.927);
+  padding: 30px
+}
+
 .card{
   display: flex;
   justify-content: space-between;
+  border-radius: 5px;
+  width: 800px;
 }
 
 .card img{
   border-radius: 76px;
 }
 
+.card .info-wrap{
+  display: flex;
+  
+}
+
 .phone {
-  border: solid 2px rgb(90, 90, 203);
+  border: solid 2px rgba(49, 101, 150, 0.927);
   border-radius: 50px;
   padding: 10px;
 }
