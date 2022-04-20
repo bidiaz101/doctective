@@ -5,8 +5,10 @@ function ProviderCard({ provider }) {
         img: '',
         title: ''
     })
+    const [status, setStatus] = useState('idle')
 
     useEffect(() => {
+        setStatus('loading')
         fetch('/comics/random')
           .then(resp => resp.json())
           .then(data => {
@@ -15,6 +17,7 @@ function ProviderCard({ provider }) {
                   title: title,
                   img: img
               })
+              setStatus('idle')
           })
     }, [])
 
@@ -41,7 +44,12 @@ function ProviderCard({ provider }) {
                     <p>Gender: {gender}</p>
                     <p>Email: {email}</p>
                     <p>Address: {formatLocation(location)}</p>
-                    <p>Favorite XKCD comic: <a href={comic.img} target="_blank" rel="noreferrer noopener">{comic.title}</a></p>
+                    <p>Favorite XKCD comic: {
+                        status === 'loading' ? 
+                            <p>Loading...</p> 
+                        : 
+                            <a href={comic.img} target="_blank" rel="noreferrer noopener">{comic.title}</a>
+                    }</p>
                 </div>
             </div>
             <div>
