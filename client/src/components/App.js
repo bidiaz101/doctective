@@ -17,9 +17,9 @@ function App() {
   return (
     <div className="App">
       <h1>Doctective</h1>
-      <p>Results</p>
       <div className='grid-wrap'>
         <div className='grid'>
+          <p className='results'>Results</p>
           {providerCards}
         </div>
       </div>

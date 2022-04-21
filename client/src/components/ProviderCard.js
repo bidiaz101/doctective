@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 
 function ProviderCard({ provider }) {
     const [comic, setComic] = useState({
@@ -21,11 +21,11 @@ function ProviderCard({ provider }) {
           })
     }, [])
 
-    const { picture, name, gender, cell, email, location} = provider
+    const { picture, name, gender, cell, email, location } = provider
 
-    function formatName(nameObj){
-        const {title, first, last} = nameObj
-        return `${title}. ${first} ${last}`
+    function formatTitle(nameObj, gender){
+        const { title, first, last } = nameObj
+        return `${title}. ${first} ${last} ${gender === 'female' ? '♀️' : '♂️'}`
     }
 
     function formatLocation(locationObj){
@@ -37,16 +37,15 @@ function ProviderCard({ provider }) {
         <div className='card'>
             <div className='info-wrap'>
                 <div>
-                    <img src={picture.medium} alt={formatName(name)} />
+                    <img src={picture.medium} alt={formatTitle(name, gender)} />
                 </div>
                 <div>
-                    <h2>{formatName(name)}</h2>
-                    <p>Gender: {gender}</p>
-                    <p>Email: {email}</p>
-                    <p>Address: {formatLocation(location)}</p>
+                    <h2>{formatTitle(name, gender)}</h2>
+                    <p>📧 {email}</p>
+                    <p>{formatLocation(location)}</p>
                     <p>Favorite XKCD comic: {
                         status === 'loading' ? 
-                            <p>Loading...</p> 
+                            <span>Loading...</span> 
                         : 
                             <a href={comic.img} target="_blank" rel="noreferrer noopener">{comic.title}</a>
                     }</p>
