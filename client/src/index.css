@@ -12,10 +12,6 @@ code {
     monospace;
 }
 
-/* body * {
-  border: solid 2px red;
-} */
-
 h1{
   color: white;
   background-color: rgba(49, 101, 150, 0.927);
@@ -39,7 +35,7 @@ h1{
   justify-content: space-between;
   border: 1px solid #ebeef5;
   border-radius: 5px;
-  width: 800px;
+  width: 870px;
   box-shadow: 4px 4px 4px 4px rgba(0,0,0,0.2);
   padding: 20px;
   color: #303133;
@@ -59,8 +55,25 @@ h1{
   display: flex;
 }
 
-.phone {
-  border: solid 2px rgba(49, 101, 150, 0.927);
-  border-radius: 50px;
+.card .phone {
+  border: solid 3px rgba(49, 101, 150, 0.927);
+  border-radius: 40px;
+  cursor: pointer;
   padding: 10px;
+}
+
+.card .phone:hover{
+  border: solid 3px rgba(25, 51, 74, 0.941);
+}
+
+.card .phone:hover span{
+  position: relative;
+  top: 2px;
+  color: rgba(25, 51, 74, 0.941);
+}
+
+.card .phone span{
+  font-weight: 600;
+  color: rgba(49, 101, 150, 0.927);
+  padding: 25px;
 }

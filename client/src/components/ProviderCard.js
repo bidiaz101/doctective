@@ -53,7 +53,9 @@ function ProviderCard({ provider }) {
                 </div>
             </div>
             <div>
-                <p className='phone' >☎️ {cell}</p>
+                <div className='phone'>
+                    <span>☎️ {cell}</span>
+                </div>
             </div>
         </div>
     )
